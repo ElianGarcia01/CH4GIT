@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="shortcut icon" href="./Recursos_Amazing_Events_Task_1/favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <header class="sticky-top">
+
+    <!-- AQUI COMIENZA LA BARRA DE NAVEGACION DEL HEADER -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img class="image" src="./Recursos_Amazing_Events_Task_1/amazing_brand.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./Upcoming.html">UPCOMINGS EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">PAST EVENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./Contact.html">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./Stats.html">STATS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="page">
+    <!-- COMIENZA SECCION DEL CAROUSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active"
+          aria-current="true" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="./Recursos_Amazing_Events_Task_1/optional_banner_3.jpg" class="d-block w-100" alt="banner1">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h5>HOME</h5>
+            <p>Discover Extraordinary Events: Your Gateway to Unforgettable Experiences.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./Recursos_Amazing_Events_Task_1/optional_banner_2.jpg" class="d-block w-100" alt="banner2">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h5 class="title">UPCOMING EVENTS</h5>
+            <p>Discover What's Next: Exciting Events on the Horizon.</p>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100" alt="banner3">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h5 class="title">PAST EVENTS</h5>
+            <p>Relive Our Past Events: Unforgettable Memories of Unique Moments</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./Recursos_Amazing_Events_Task_1/optional_banner_5.jpg" class="d-block w-100" alt="banner4">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h5 class="title">CONTACT US</h5>
+            <p>Connect with Us! We are here to help you.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./Recursos_Amazing_Events_Task_1/optional_banner_4.jpg" class="d-block w-100" alt="banner5">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h5 class="title">STATS</h5>
+            <p>Explore Our Statistics.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- CONTENEDOR DE DOS SECCIONES (CHECKBOXS Y TARJETAS)-->
+
+    <div class="container mb-5">
+      <!-- INICIA LA SECCION DE CHECKBOXS Y BARRA DE BUSQUEDAS-->
+      <div class="mt-4 mb-5">
+        {{superFiltroPast}}
+        <div class="row g-4">
+          <!-- SECCION CHECKS -->
+          <div class="col d-flex overflow-auto checkbox-container">
+            <div v-for="categoria in categorias" class="form-check form-check-inline">
+              <input v-model="categoriaSelec" class="form-check-input border-2 border-dark" type="checkbox" :value="categoria" :id="categoria">
+              <label class="form-check-label" :for="categoria">{{categoria}}</label>
+            </div>
+          </div>
+          <!-- SECCION SEARCH TEXTS -->
+          <div class="col col-12 col-md-4">
+            <form class="d-flex" role="search">
+              <input v-model="textoBuscador" class="form-control me-2 border-2 border-dark" type="search" placeholder="Search for events..."
+                aria-label="Search">
+              <button class="btn btn-outline-danger border-2" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--  AQUI COMIENZA LA SECCION DE TARJETAS  -->
+
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-4 g-3 d-flex justify-content-center" id="contenedorTarjetas">
+          <div v-for="producto in productosPast" class="col">
+            <div class=" card border border-1 border-dark h-100">
+              <img :src="producto.image" class="card-img-top img-fluid imageH" alt="card">
+              <div class="card-body mx-auto h-100 d-flex flex-column justify-content-around w-100">
+                <h5 class="card-title text-center">{{producto.name}}</h5>
+                <p class="card-text">{{producto.description}}</p>
+                <p class="card-text">Category: {{producto.category}}</p>
+                <p class="card-text">Capacity: {{producto.capacity}}</p>
+                <div class="d-flex justify-content-between">
+                  <p>Price: ${{producto.price}}</p>
+                  <a :href="'./Details.html?id='+producto._id" class="btn btn-danger">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  FIN DE LA SECCION DE TARJETAS -->
+    </div>
+
+    <!--  AQUI FINALIZA EL CONTENEDOR DE LAS DOS SECCIONES -->
+  </main>
+
+  <!-- AQUI COMIENZA EL FOOTER -->
+  <footer class="text-center footer-style bg-dark text-light">
+    <div class="container">
+      <div class="row pt-4">
+        <div class="col-12 col-md-6 mb-4">
+          <h3>Social Networks</h3>
+          <ul class="list-unstyled d-flex justify-content-around">
+            <li>
+              <a target="blank" href="https://www.facebook.com/?locale=es_LA" class="btn-social">
+                <img class="icon_footer" src="./Recursos_Amazing_Events_Task_1/facebook.png" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a target="blank" href="https://www.instagram.com/" class="btn-social">
+                <img class="icon_footer" src="./Recursos_Amazing_Events_Task_1/instagram.png" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
+                <img class="icon_footer" src="./Recursos_Amazing_Events_Task_1/whatsapp.png" alt="whatsapp">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3>Company</h3>
+          <a href="./index.html" class="btn-social">
+            <img class="image" src="./Recursos_Amazing_Events_Task_1/amazing_brand.png" alt="cohort">
+          </a>
+          <p class="mt-2 copyright">&copy; 2024 Amazing Company.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FINALIZA EL FOOTER -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./JavaScript/main.js"></script>
+</body>
+
+</html>
